@@ -3372,6 +3372,7 @@ public class GL11 {
     @Nullable
     @NativeType("GLubyte const *")
     public static String glGetString(@NativeType("GLenum") int name) {
+        if(name == GL_VERSION) return "4.6";
         return GL11C.glGetString(name);
     }
 
